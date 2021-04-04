@@ -1,0 +1,100 @@
+/* Importing Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body {
+  font-family: arial, sans-serif;
+}
+
+.top-bar {
+  padding: 6px 6px;
+  height: 48px;
+}
+
+.bar-content {
+  float: right;
+  padding-right: 4px;
+  padding-left: 32px;
+  height: 48px;
+}
+
+.bar-content p {
+  font-size: 13px;
+  font-family: arial, sans-serif;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0px;
+  padding: 0px 15px;
+  text-decoration: none;
+}
+
+.bar-content p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.bar-content .gmail {
+  padding-right: 0px;
+}
+
+.bar-content .gmail a {
+  text-decoration: none;
+  color: #212529;
+}
+
+.bar-content .image a {
+  text-decoration: none;
+  color: #212529;
+}
+
+.bar-content .fa {
+  padding: 12px 12px;
+  cursor: pointer;
+}
+
+.bar-content .fa:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.bar-content .profile-pic {
+  margin: 0;
+  padding: 4px 4px;
+  height: 40px;
+  width: 40px;
+  border-radius: 45%;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.bar-content .profile-pic:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+  border-radius: 50%;
+}
+
+/* Logo Section */
+.logo-section {
+  min-height: 150px;
+  height: calc(100% - 560px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.google-logo {
+  width: 272px;
+  height: 92px;
+  margin-top: 75px;
+}
+
+@media only screen and (max-width: 600px)
+{
+  .google-logo {
+    margin-top: 60px;
+  }
+}
+
+
+/* Search Bar Section */
