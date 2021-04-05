@@ -3,6 +3,7 @@
 
 body {
   font-family: arial, sans-serif;
+  background-color: white;
 }
 
 .top-bar {
@@ -84,17 +85,74 @@ body {
 }
 
 .google-logo {
-  width: 272px;
-  height: 92px;
+  width: 271px;
+  height: 91px;
   margin-top: 75px;
 }
 
-@media only screen and (max-width: 600px)
-{
+@media only screen and (max-width: 600px) {
   .google-logo {
     margin-top: 60px;
   }
 }
 
-
 /* Search Bar Section */
+.search-section {
+  padding: 20px 20px;
+  display: block;
+  text-align: center;
+}
+
+.bar {
+  width: 582px;
+  height: 44px;
+  padding-left: 14px;
+  padding-top: 5px;
+  padding-right: 8px;
+  padding-bottom: 0px;
+  border-radius: 20px 20px 20px 20px;
+  border-color: rgb(184, 184, 184, 0.5);
+  outline: 0;
+}
+
+.bar:hover {
+
+}
+
+@media only screen and (max-width: 800px) {
+  .bar {
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bar {
+    width: 450px;
+  }
+}
+
+.two-buttons {
+  padding-top: 18px;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+}
+
+button {
+  color: #3c4043;
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  margin: 11px 4px;
+  padding: 0 16px;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+button:hover {
+  border: 1px solid grey;
+  border-radius: 4px;
+}
