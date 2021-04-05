@@ -1,9 +1,19 @@
 /* Importing Roboto */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
 body {
   font-family: arial, sans-serif;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .top-bar {
@@ -50,6 +60,7 @@ body {
 .bar-content .fa {
   padding: 12px 12px;
   cursor: pointer;
+  height: 45px;
 }
 
 .bar-content .fa:hover {
@@ -98,9 +109,51 @@ body {
 
 /* Search Bar Section */
 .search-section {
-  padding: 20px 20px;
-  display: block;
+  width: 580px;
+  margin: 0px auto;
+  position: relative;
+  margin-top: -8px;
   text-align: center;
+  padding: 20px 20px;
+}
+
+.search-section .searchbar {
+  display: block;
+  border: 1px solid #ddd;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 16px;
+  padding: 13px;
+  padding-left: 45px;
+  border-radius: 25px;
+  width: 100%;
+  transition: box-shadow 100ms;
+  outline: none;
+}
+
+.search-section .searchbar:hover {
+  border: 1px solid #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.05),
+    0 0 2px rgba(0, 0, 0, 0.05),
+    0 0 3px rgba(0, 0, 0, 0.05),
+    0 0 4px rgba(0, 0, 0, 0.05),
+    0 0 5px rgba(0, 0, 0, 0.05),
+    0 0 4px rgba(0, 0, 0, 0.05),
+    0 0 5px rgba(0, 0, 0, 0.05)
+}
+
+.search-section .search-icon {
+  width: 20px;
+  opacity: .4;
+  position: absolute;
+  top: 35px;
+  left: 35px;
+}
+
+.search-section .vs-icon {
+  width: 14px;
+  position: absolute;
+  top: 35px;
+  right: 35px;
 }
 
 .two-buttons {
@@ -134,49 +187,6 @@ button:focus {
   border-radius: 4px;
 }
 
-.bar {
-  margin: 0 auto;
-  width: 582px;
-  border-radius: 30px;
-  border: 1px solid #dcdcdc;
-}
-
-.bar:hover {
-  box-shadow: 1px 1px 8px 1px #dcdcdc;
-}
-
-.bar:focus-within {
-  box-shadow: 1px 1px 8px 1px #dcdcdc;
-  outline: none;
-}
-
-@media only screen and (max-width: 800px) {
-  .bar {
-    width: 500px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .bar {
-    width: 450px;
-  }
-}
-
-.searchbar {
-  height: 45px;
-  border: none;
-  width: 500px;
-  font-size: 16px;
-  outline: none;
-}
-
-.voice {
-  position: static;
-  height: 20px;
-  left: 10px;
-  bottom: 9px;
-}
-
 /* Language Section */
 .language {
   font-size: 14px;
@@ -192,77 +202,66 @@ button:focus {
   margin-bottom: 24px;
 }
 
-.language  a {
+.language a {
   padding: 0px 3px;
   color: rgb(102, 0, 153);
   text-decoration: none;
 }
 
-.language  a:hover {
+.language a:hover {
   padding: 0px 3px;
   color: rgb(102, 0, 153);
   text-decoration: underline;
 }
 
 /* Footer */
-
-.footer {
+footer {
   background: #f2f2f2;
-  font-family: arial, sans-serif;
-  color: #757575;
-  bottom: 0;
   position: fixed;
+  left: 0;
+  bottom: 0;
   width: 100%;
 }
 
-.footer p{
-  margin-bottom: 0px;
+footer h4 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 15px;
+  line-height: 39.5px;
+  font-weight: 400;
+  padding-left: 29px;
+  border: 1px solid #eee;
 }
 
-.footer:after {
-  display: block;
-  clear: both;
-  content: "";
-  height: 0;
-  overflow: hidden;
+footer a {
+  color: #5f6368;
+  display: inline-block;
+  padding: 12px 11.3px;
+  font-size: 14px;
 }
 
-.foot1 {
-  padding: 15px 30px;
-  height: auto;
-  border-bottom: 1px solid #dadce0;
-}
-
-.foot2 {
-  min-height: 47px;
-  padding: 13px 20px;
-
-}
-
-.foot2 .left-menu {
-  float: left;
-}
-
-.foot2 .left-menu a {
-  padding: 15px 15px;
-  text-decoration: none;
-  color: inherit;
-}
-
-.foot2 .left-menu a:hover {
+footer a:hover {
   text-decoration: underline;
 }
 
-.foot2 .right-menu {
-  float: right;
-}
-
-.foot2 .right-menu a {
-  padding: 15px 15px;
+footer .links a {
   text-decoration: none;
-  color: inherit;
 }
 
-.foot2 .right-menu a:hover {
+footer .links a:hover {
   text-decoration: underline;
+  color: #5f6368;
+}
+
+.links {
+  border-top: 1px solid #ddd;
+  display: flex;
+}
+
+.link-1 {
+  padding-left: 18.7px;
+  flex: 1;
+}
+
+.link-2 {
+  padding-right: 18.7px;
 }
